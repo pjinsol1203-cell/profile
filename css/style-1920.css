@@ -1,0 +1,25 @@
+.hero{
+    height: 100vh;
+    background: url(../img/hero-banner-star.png) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 120px;
+    font-family: "Playfair Display", serif;
+}
+
+h4{
+    color: #fff;
+    font-size: 30px;
+}
+
+.aboutme{
+    background-color: #0e002e;
+    color: #fff;
+    display: flex;
+}
