@@ -1,4 +1,4 @@
-:root{
+::root{
     --main-color: #;
     --heading1:1.6rem;
     --heading2:1.4rem;
@@ -40,19 +40,23 @@ html{
     font-size: 20px;
 }
 
+body.no-scroll{
+    overflow: hidden;
+}
+
 .common-frame{
     margin: 0 3rem;
 }
 
 
 
-@media(max-width:1024px){
+@media (max-width:1024px){
     html{font-size: 18px;}
     .common-frameP{width: auto;
     margin: 0 2rem;}
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
     html{font-size: 14px;}
     .common-frameP{width: auto;
     margin: 0 1rem;}
