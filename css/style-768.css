@@ -10,4 +10,27 @@
     .about-txt{
         width: auto;
     }
+
+    .ex-bg h1 {
+    color: #fff;
+    position: absolute;
+    left: 6rem;
+    top: 1.3rem;
+    }
+
+    .ex-bg h1 {
+    position: absolute;
+    left: 6rem;
+    top: 5.3rem;
+    font-size: 3rem;
+    }
+
+    .about-content {
+    height: auto;
+    padding: 0;
+    }
+
+    .aboutme2-content {
+    padding: 0;
+    }
 }

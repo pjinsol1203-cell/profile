@@ -1,4 +1,7 @@
-.about-img{
-    width: 950px;
-    height: auto;
+.foi{
+    transition: all 1s ease 0s;
+    filter: blur(10px);
+}
+.foi.on{
+    filter: blur(0px);
 }
