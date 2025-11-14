@@ -1,0 +1,24 @@
+@media (max-width:1580px){
+      .skill-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 7rem;
+}
+
+    .panorama-slider{
+        --panorama-duration: 44s;
+    }
+
+    .carousel-viewport{
+        padding: 3rem 0;
+    }
+
+    .panorama-track{
+        gap: clamp(1rem, 2vw, 2.5rem);
+    }
+
+    .panorama-item{
+        width: clamp(220px, 26vw, 320px);
+    }
+}

@@ -1,5 +1,55 @@
-@media(max-width:1024px){
+@media (max-width:1024px){
     .hero{
         height: 800px;
+    }
+
+    .skill-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 7rem;
+}
+
+    .panorama-slider{
+        --panorama-duration: 38s;
+    }
+
+    .carousel-viewport{
+        padding: 2.5rem 0;
+    }
+
+    .panorama-track{
+        gap: clamp(0.8rem, 3vw, 2rem);
+    }
+
+    .panorama-item{
+        width: clamp(200px, 32vw, 280px);
+        padding: clamp(0.8rem, 2vw, 1.2rem);
+    }
+}
+
+@media (max-width:960px){
+      .skill-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0 3rem;
+    }
+
+    .panorama-slider{
+        --panorama-duration: 34s;
+    }
+
+    .carousel-viewport{
+        padding: 2rem 0;
+    }
+
+    .panorama-track{
+        gap: clamp(0.6rem, 3vw, 1.5rem);
+    }
+
+    .panorama-item{
+        width: clamp(180px, 60vw, 240px);
+        padding: clamp(0.6rem, 3vw, 1rem);
     }
 }

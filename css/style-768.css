@@ -20,7 +20,7 @@
 
     .ex-bg h1 {
     position: absolute;
-    left: 6rem;
+    left: 3rem;
     top: 5.3rem;
     font-size: 3rem;
     }
@@ -32,5 +32,51 @@
 
     .aboutme2-content {
     padding: 0;
+    }
+
+    .skill-title {
+    font-size: 3rem;
+    }
+
+    .skill-main-txt {
+        margin-left: 3rem;
+    }
+
+    .skill-box {
+    padding: 1rem 1.5rem;
+    }
+
+    .panorama-slider{
+        --panorama-duration: 28s;
+    }
+
+    .carousel-viewport{
+        padding: 1.8rem 0;
+    }
+
+    .panorama-track{
+        gap: 1rem;
+    }
+
+    .panorama-item{
+        width: clamp(160px, 76vw, 210px);
+        padding: clamp(0.5rem, 3vw, 0.8rem);
+    }
+}
+
+@media (max-width:320px){
+    .skill-boxes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 0 3rem;
+    }
+
+    .panorama-slider{
+        --panorama-duration: 24s;
+    }
+
+    .panorama-item{
+        width: 72vw;
     }
 }

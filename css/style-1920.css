@@ -30,10 +30,6 @@ h4{
     min-height: 900px;
 }
 
-.aboutme .common-frame{
-    /* height: 900px; */
-}
-
 .about-content {
     display: flex;
     flex-direction: column;
@@ -393,8 +389,12 @@ h4{
 .ex-bg h1 {
     color: #fff;
     position: absolute;
-    left: 6rem;
+    left: 7rem;
     top: 1.3rem;
+}
+
+.skill-main-txt{
+    margin-left: 7rem;
 }
 
 .skills-bg{
@@ -403,12 +403,12 @@ h4{
     color: #fff;
 }
 
-.skill-box{
+.skill-box {
     background: linear-gradient(135deg, rgba(53, 43, 82, 0.9), rgba(108, 82, 132, 0.35));
     border: 1px solid rgba(240, 232, 255, 0.5);
     box-shadow: 0 1.2rem 2.1rem rgba(12, 6, 24, 0.45);
     border-radius: 1.2rem;
-    padding: 2.4rem 2rem;
+    padding: 1.5rem 1.8rem;
     backdrop-filter: blur(7px);
     box-sizing: border-box;
     overflow: visible;
@@ -416,8 +416,118 @@ h4{
     pointer-events: none;
 }
 
-.skill-boxes{
+.skill-boxes {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    gap: 1rem;
+    margin: 0 7rem;
+}
+
+.skill-title{
+    font-size: 4.5rem;
+}
+
+.skill-sub-tilte{
+    margin-bottom: 0.5rem;
+    font-family: "Playfair Display", serif;
+}
+
+.skill-sub-tilte2 {
+    margin-bottom: 2rem;
+}
+
+.skill-box h4{
+    font-family: "Playfair Display", serif;
+    padding-bottom: 1rem;}
+
+.skill-box p{
+    font-size: 0.8rem;
+}
+
+.pop-up-design{
+    background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
+    min-height: 900px;
+    height: 900px;
+    color: #fff;
+}
+
+.popup-txt{
+    margin: 0 7rem;
+}
+
+.popup-txt h1{
+    font-size: 4.5rem;
+}
+
+.popup-txt h4{
+    font-size: 1rem;
+}
+
+.carousel-viewport{
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 4rem 0;
+    overflow: hidden;
+    background: rgba(3, 0, 10, 0.65);
+}
+
+.panorama-slider{
+    isolation: isolate;
+    --panorama-duration: 48s;
+}
+
+.panorama-track{
+    display: flex;
+    gap: clamp(1.5rem, 3vw, 4rem);
+    width: max-content;
+    animation: panorama-scroll var(--panorama-duration) linear infinite;
+    will-change: transform;
+}
+
+.panorama-slider[data-direction="right"] .panorama-track{
+    animation-direction: reverse;
+}
+
+.panorama-item{
+    flex: 0 0 auto;
+    width: clamp(260px, 22vw, 340px);
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    padding: clamp(1rem, 2.2vw, 1.8rem);
+    border-radius: 1.4rem;
+    background: rgba(5, 5, 15, 0.9);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panorama-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+@keyframes panorama-scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-33.333%);
+    }
+}
+
+.sr-only{
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
