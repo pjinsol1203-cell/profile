@@ -3,6 +3,35 @@
         height: 800px;
     }
 
+    .ex-bg {
+        min-height: 700px;
+        height: 700px;
+    }
+
+    .ex {
+        margin-left: 3rem;
+    }
+
+    .ex h1 {
+        font-size: 3.5rem;
+    }
+
+    .experience {
+        height: 500px;
+    }
+
+    .experience .swiper-slide {
+        width: 260px;
+    }
+
+    .swiper-slide h4 {
+        font-size: 1.05rem;
+    }
+
+    .swiper-slide p {
+        font-size: 0.9rem;
+    }
+
     .skill-boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,12 +52,74 @@
     }
 
     .panorama-item{
-        width: clamp(200px, 32vw, 280px);
+        width: clamp(220px, 35vw, 300px);
+        max-width: 100%;
         padding: clamp(0.8rem, 2vw, 1.2rem);
+        border-radius: clamp(0.6rem, 1vw, 1rem);
+    }
+
+    .panorama-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .panorama-item figcaption{
+        font-size: clamp(0.9rem, 1.2vw, 1rem);
+        padding: 0.8rem 0 0 0 !important;
+    }
+
+    .banner-design .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        padding: clamp(0.6rem, 1.2vw, 0.9rem) 0;
+        gap: clamp(0.3rem, 0.45vw, 0.45rem);
+    }
+
+    .banner-design .swiper-pagination-bullet {
+        width: clamp(5px, 0.5vw, 6px);
+        height: clamp(5px, 0.5vw, 6px);
+        border-width: 1px;
+    }
+
+    .banner-design .swiper-pagination-bullet-active {
+        width: clamp(16px, 2vw, 20px);
+        height: clamp(5px, 0.5vw, 6px);
+    }
+
+    .banner-design figure figcaption{
+        font-size: clamp(0.8rem, 1vw, 0.95rem);
+        padding: clamp(0.8rem, 1.2vw, 1.2rem);
     }
 }
 
 @media (max-width:960px){
+    .ex-bg {
+        min-height: 650px;
+        height: 650px;
+    }
+
+    .ex {
+        margin-left: 3rem;
+    }
+
+    .ex h1 {
+        font-size: 3rem;
+    }
+
+    .experience {
+        height: 480px;
+    }
+
+    .experience .swiper-slide {
+        width: 240px;
+    }
+
+    .swiper-slide h4 {
+        font-size: 1rem;
+    }
+
+    .swiper-slide p {
+        font-size: 0.88rem;
+    }
+
       .skill-boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -49,7 +140,40 @@
     }
 
     .panorama-item{
-        width: clamp(180px, 60vw, 240px);
-        padding: clamp(0.6rem, 3vw, 1rem);
+        width: clamp(240px, 70vw, 300px);
+        max-width: 100%;
+        padding: clamp(0.8rem, 2.5vw, 1.2rem);
+        border-radius: clamp(0.5rem, 0.8vw, 0.8rem);
+    }
+
+    .panorama-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .panorama-item figcaption{
+        font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+        padding: 0.7rem 0 0 0 !important;
+    }
+
+    .banner-design .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        padding: clamp(0.5rem, 1vw, 0.8rem) 0;
+        gap: clamp(0.25rem, 0.4vw, 0.4rem);
+    }
+
+    .banner-design .swiper-pagination-bullet {
+        width: clamp(4px, 0.45vw, 5px);
+        height: clamp(4px, 0.45vw, 5px);
+        border-width: 1px;
+    }
+
+    .banner-design .swiper-pagination-bullet-active {
+        width: clamp(14px, 1.8vw, 18px);
+        height: clamp(4px, 0.45vw, 5px);
+    }
+
+    .banner-design figure figcaption{
+        font-size: clamp(0.75rem, 0.9vw, 0.85rem);
+        padding: clamp(0.7rem, 1vw, 1rem);
     }
 }

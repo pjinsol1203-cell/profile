@@ -11,18 +11,53 @@
         width: auto;
     }
 
-    .ex-bg h1 {
-    color: #fff;
-    position: absolute;
-    left: 6rem;
-    top: 1.3rem;
+    .ex-bg {
+        min-height: 600px;
+        height: 600px;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
     }
 
-    .ex-bg h1 {
-    position: absolute;
-    left: 3rem;
-    top: 5.3rem;
-    font-size: 3rem;
+    .ex {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .ex h1 {
+        color: #fff;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+
+
+    .experience {
+        height: 450px;
+        width: 100%;
+    }
+
+    .swiper {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .experience .swiper-slide {
+        width: 220px;
+    }
+
+    .swiper-slide h4 {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+        line-height: 1.4;
+    }
+
+    .swiper-slide p {
+        font-size: 0.85rem;
     }
 
     .about-content {
@@ -59,12 +94,92 @@
     }
 
     .panorama-item{
-        width: clamp(160px, 76vw, 210px);
-        padding: clamp(0.5rem, 3vw, 0.8rem);
+        width: clamp(240px, 85vw, 320px);
+        max-width: 100%;
+        padding: clamp(0.8rem, 2.5vw, 1.2rem);
+        border-radius: clamp(0.4rem, 0.6vw, 0.6rem);
+    }
+
+    .panorama-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .panorama-item figcaption{
+        font-size: clamp(0.85rem, 1.2vw, 1rem);
+        padding: 0.8rem 0 0 0 !important;
+    }
+
+    .banner-design .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        padding: clamp(0.5rem, 0.9vw, 0.7rem) 0;
+        gap: clamp(0.2rem, 0.35vw, 0.35rem);
+    }
+
+    .banner-design .swiper-pagination-bullet {
+        width: clamp(4px, 0.4vw, 5px);
+        height: clamp(4px, 0.4vw, 5px);
+        border-width: 1px;
+    }
+
+    .banner-design .swiper-pagination-bullet-active {
+        width: clamp(12px, 1.5vw, 16px);
+        height: clamp(4px, 0.4vw, 5px);
+    }
+
+    .banner-design figure figcaption{
+        font-size: clamp(0.7rem, 0.85vw, 0.8rem);
+        padding: clamp(0.6rem, 0.9vw, 0.9rem);
+    }
+
+    .popup-txt {
+        margin: 0 3rem;
+    }
+
+    .bn-design-txt {
+        color: #fff;
+        margin-left: 3rem;
+        margin-bottom: 4rem;
     }
 }
 
 @media (max-width:320px){
+    .ex-bg {
+        min-height: 550px;
+        height: 550px;
+        padding-top: 1.5rem;
+    }
+
+    .ex {
+        padding: 0 1rem;
+    }
+
+    .ex h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .experience {
+        height: 400px;
+    }
+
+    .swiper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .experience .swiper-slide {
+        width: 180px;
+    }
+
+    .swiper-slide h4 {
+        font-size: 0.85rem;
+        padding: 0.3rem 0;
+    }
+
+    .swiper-slide p {
+        font-size: 0.75rem;
+    }
+
     .skill-boxes {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -77,6 +192,40 @@
     }
 
     .panorama-item{
-        width: 72vw;
+        width: clamp(220px, 85vw, 300px);
+        max-width: 100%;
+        padding: clamp(0.6rem, 2vw, 1rem);
+        border-radius: clamp(0.3rem, 0.5vw, 0.5rem);
+    }
+
+    .panorama-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .panorama-item figcaption{
+        font-size: clamp(0.8rem, 1vw, 0.9rem);
+        padding: 0.7rem 0 0 0 !important;
+    }
+
+    .banner-design .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        padding: clamp(0.4rem, 0.8vw, 0.6rem) 0;
+        gap: clamp(0.2rem, 0.3vw, 0.3rem);
+    }
+
+    .banner-design .swiper-pagination-bullet {
+        width: clamp(3px, 0.35vw, 4px);
+        height: clamp(3px, 0.35vw, 4px);
+        border-width: 1px;
+    }
+
+    .banner-design .swiper-pagination-bullet-active {
+        width: clamp(10px, 1.2vw, 14px);
+        height: clamp(3px, 0.35vw, 4px);
+    }
+
+    .banner-design figure figcaption{
+        font-size: clamp(0.65rem, 0.75vw, 0.75rem);
+        padding: clamp(0.5rem, 0.8vw, 0.8rem);
     }
 }

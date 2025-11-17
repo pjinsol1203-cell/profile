@@ -329,13 +329,12 @@ h4{
     pointer-events: none;
 }
 
-.ex-bg{
+.ex-bg {
     position: relative;
     background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
     min-height: 900px;
     height: 900px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -370,7 +369,7 @@ h4{
 .experience .swiper-slide figure{
     width:100%;
 }
-.swiper-slide  figure img {
+.ex-bg .swiper-slide  figure img {
     display: block;
     width: 100%;
     aspect-ratio: 1/1.3;
@@ -386,21 +385,25 @@ h4{
     font-size: 1.13rem;
 }
 
+.ex {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7rem;
+}
+
 .ex-bg h1 {
     color: #fff;
-    position: absolute;
-    left: 7rem;
-    top: 1.3rem;
 }
 
 .skill-main-txt{
     margin-left: 7rem;
 }
 
-.skills-bg{
+.skills-bg {
     background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
     min-height: 900px;
     color: #fff;
+    padding: 6rem 0;
 }
 
 .skill-box {
@@ -444,11 +447,12 @@ h4{
     font-size: 0.8rem;
 }
 
-.pop-up-design{
+.pop-up-design {
     background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
     min-height: 900px;
     height: 900px;
     color: #fff;
+    padding: 6rem 0;
 }
 
 .popup-txt{
@@ -463,13 +467,13 @@ h4{
     font-size: 1rem;
 }
 
-.carousel-viewport{
+.carousel-viewport {
     position: relative;
     width: 100vw;
     margin-left: calc(50% - 50vw);
     padding: 4rem 0;
     overflow: hidden;
-    background: rgba(3, 0, 10, 0.65);
+    box-sizing: border-box;
 }
 
 .panorama-slider{
@@ -489,26 +493,164 @@ h4{
     animation-direction: reverse;
 }
 
-.panorama-item{
+.panorama-item {
     flex: 0 0 auto;
     width: clamp(260px, 22vw, 340px);
-    aspect-ratio: 4 / 3;
+    max-width: 100%;
     margin: 0;
     padding: clamp(1rem, 2.2vw, 1.8rem);
-    border-radius: 1.4rem;
-    background: rgba(5, 5, 15, 0.9);
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.45);
+    border-radius: clamp(0.8rem, 1.4vw, 1.4rem);
+    background: rgb(67 67 79 / 18%);
+    box-shadow: 0 clamp(1rem, 2vw, 2rem) clamp(1.5rem, 3vw, 3rem) rgba(0, 0, 0, 0.45);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    cursor: grab;
+}
+.banner-design {
+    padding-bottom: 2rem!important;
+}
+.banner-train{
+    transition-timing-function: linear!important;
+}
+.banner-design .swiper-pagination{
+    color:#fff;
 }
 
 .panorama-item img{
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: contain;
     object-position: center;
     display: block;
+}
+
+.panorama-item figcaption{
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.8rem 0 0 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    border: 0 !important;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.bn-design {
+    background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
+    padding: 6rem 0;
+}
+
+.bn-design-txt{
+    color: #fff;
+    margin-left: 7rem;
+    margin-bottom: 4rem;
+}
+
+.bn-design-txt h4{
+    font-size: 1rem;
+}
+
+.banner-design{
+    position: relative;
+}
+
+.banner-design .swiper-slide{
+    position: relative;
+}
+
+.banner-design figure{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+}
+
+.banner-design figure img{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+
+.banner-design figure figcaption {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    text-align: center;
+    line-height: 1.5;
+    /* margin-top: clamp(4rem, 5vw, 5.5rem); */
+    padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.banner-design .swiper-slide .bn-txt{
+    padding-top: 1rem;
+}
+
+.banner-design .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 700px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.4rem, 0.6vw, 0.6rem);
+    padding-top: clamp(0.8rem, 1.5vw, 1.2rem);
+    padding-bottom: clamp(0.8rem, 1.5vw, 1.2rem);
+    pointer-events: none;
+}
+
+
+.banner-design .swiper-pagination-bullet {
+    pointer-events: auto;
+}
+
+/* Pagination bullet 기본 스타일 (비활성화) */
+.banner-design .swiper-pagination-bullet {
+    width: clamp(6px, 0.6vw, 8px);
+    height: clamp(6px, 0.6vw, 8px);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Pagination bullet 호버 효과 */
+.banner-design .swiper-pagination-bullet:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Pagination bullet 활성화 상태 */
+.banner-design .swiper-pagination-bullet-active {
+    width: clamp(20px, 2.5vw, 24px);
+    height: clamp(6px, 0.6vw, 8px);
+    background: rgba(200, 150, 220, 0.95);
+    border: 1.5px solid rgba(220, 170, 240, 1);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(200, 150, 220, 0.7), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes panorama-scroll{
@@ -530,4 +672,40 @@ h4{
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+@media (max-width: 1700px) {
+    .ex-bg {
+        min-height: 820px;
+        height: 820px;
+        padding: 4rem 3rem;
+        box-sizing: border-box;
+    }
+
+    .ex {
+        margin-left: 0;
+    }
+
+    .ex h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .experience {
+        width: 100%;
+        height: 520px;
+    }
+
+    .experience .swiper-slide {
+        width: 260px;
+    }
+
+    .experience .swiper-slide h4 {
+        font-size: 1rem;
+    }
+
+    .experience .swiper-slide p {
+        font-size: 0.9rem;
+    }
 }

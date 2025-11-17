@@ -27,7 +27,7 @@
     <div class="noise"></div>
     <main>
         <div class="hero">
-            <div class="common-frame">   
+            <div class="common-frame foi">   
                 <p> <strong>WEB PUBLISHER</strong> 박진솔</p>
                 <h1>Eternal Glow</h1>
                 <h4>사라지지 않는 빛</h4>
@@ -133,50 +133,93 @@
         </div>
         
         <div class="ex-bg">
-            <h1>Experience</h1>
-            <div class="swiper experience">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="./img/experience3-2.jpg"alt="디지털디자인 UIUX 웹디자인&웹퍼블리셔 양성 과정">
-                        </figure>
-                        <h4>디지털디자인 UIUX <br> 웹디자인&웹퍼블리셔 양성 과정</h4>
-                        <p>2025.07.24~2025.12.11</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="./img/experience3-2.jpg" alt="온라인 마케팅 프리랜서">
-                        </figure>
-                        <h4>온라인 마케팅 프리랜서</h4>
-                        <p>2025.05~</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="./img/experience3.jpg" alt="미술학원 전임 강사">
-                        </figure>
-                        <h4>디자인 입시 미술학원 전임 강사</h4>
-                        <p>2023.03~2025.05</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure>
-                           <img src="./img/experience2.jpg" alt="경기대학교 - 산업디자인학과 졸업">
-                        </figure>
-                        <h4>경기대학교 <br> 산업디자인학과 졸업</h4>
-                        <p>2018.03~2023.02</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="./img/experience1.jpg" alt="미술학원강사 아르바이트-부전임">
-                        </figure>
-                        <h4>디자인 입시 미술학원 <br> 부전임 아르바이트</h4>
-                        <p>2018.03~2021.01</p>
+            <div class="ex common-frame">
+                <h1 class="foi">Experience</h1>
+                <div class="swiper experience">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./img/experience3-2.jpg"alt="디지털디자인 UIUX 웹디자인&웹퍼블리셔 양성 과정">
+                            </figure>
+                            <h4>디지털디자인 UIUX <br> 웹디자인&웹퍼블리셔 양성 과정</h4>
+                            <p>2025.07.24~2025.12.11</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./img/experience3-2.jpg" alt="온라인 마케팅 프리랜서">
+                            </figure>
+                            <h4>온라인 마케팅 프리랜서</h4>
+                            <p>2025.05~</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./img/experience3.jpg" alt="미술학원 전임 강사">
+                            </figure>
+                            <h4>디자인 입시 미술학원 전임 강사</h4>
+                            <p>2023.03~2025.05</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                            <img src="./img/experience2.jpg" alt="경기대학교 - 산업디자인학과 졸업">
+                            </figure>
+                            <h4>경기대학교 <br> 산업디자인학과 졸업</h4>
+                            <p>2018.03~2023.02</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./img/experience1.jpg" alt="미술학원강사 아르바이트-부전임">
+                            </figure>
+                            <h4>디자인 입시 미술학원 <br> 부전임 아르바이트</h4>
+                            <p>2018.03~2021.01</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- experience effect -->
+        <script>
+            const getCoverflowSettings = () => {
+                if (window.innerWidth <= 768) {
+                    return { rotate: 20, depth: 50 };
+                }
+
+                if (window.innerWidth <= 1700) {
+                    return { rotate: 35, depth: 80 };
+                }
+
+                return { rotate: 50, depth: 100 };
+            };
+
+            const initialSettings = getCoverflowSettings();
+
+            const swiper = new Swiper(".experience", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: initialSettings.rotate,
+                    stretch: 0,
+                    depth: initialSettings.depth,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+
+            window.addEventListener("resize", () => {
+                const { rotate, depth } = getCoverflowSettings();
+                swiper.params.coverflowEffect.rotate = rotate;
+                swiper.params.coverflowEffect.depth = depth;
+                swiper.update();
+            });
+        </script>
+
         <div class="skills-bg">
-            <div class="skill-main-txt">
+            <div class="skill-main-txt common-frame foi">
                 <h1 class="skill-title">Skills & Language</h1>
                 <h4 class="skill-sub-tilte">I create experiences with both design & code.</h4>
                 <p class="skill-sub-tilte2">디자인 감각과 개발 이해도를 함께 갖추고 있습니다. <br>
@@ -251,91 +294,218 @@
         </div>
 
         <div class="pop-up-design">
-            <div class="popup-txt">
+            <div class="popup-txt common-frame foi">
                 <h1>POP UP DESIGN</h1>
                 <h4>디자인을 벤치마킹한 후 각 무드에 어울리도록
                     <br> 테마에 맞춰서 500x500 픽셀의 팝업 디자인을 제작하였습니다.</h4>
             </div>
             <div class="carousel-viewport panorama-slider" data-direction="right">
-                <div class="panorama-track">
+                <div class="panorama-track common-frame">
                     <figure class="panorama-item">
-                        <img src="./img/black-friday-popup.png" alt="블랙프라이데이 팝업 - 할인행사 이벤트">
-                        <figcaption class="sr-only">블랙프라이데이 팝업 - 할인행사 이벤트</figcaption>
+                        <img src="./img/popup-1.jpg" alt="Winter Gift Package 증정 이벤트 팝업">
+                        <figcaption class="sr-only"><strong> Winter Gift Package </strong><br> 증정 이벤트 팝업</figcaption>
                     </figure>
 
                     <figure class="panorama-item">
-                        <img src="./img/black-friday-popup2.jpg" alt="블랙프라이데이 팝업 - 할인행사 이벤트 2">
-                        <figcaption class="sr-only">블랙프라이데이 팝업 - 할인행사 이벤트 2</figcaption>
+                        <img src="./img/popup-2.jpg" alt="달콤한 하루, 곰곰한 혜택 - 곰곰 베이커리 카페 이벤트 페이지 팝업">
+                        <figcaption class="sr-only"><strong>달콤한 하루, 곰곰한 혜택</strong> <br> - 곰곰 베이커리 카페 이벤트 페이지 팝업</figcaption>
                     </figure>
 
                     <figure class="panorama-item">
-                        <img src="./img/christmas-popup.jpg" alt="크리스마스 팝업 - 할인행사 이벤트">
-                        <figcaption class="sr-only">크리스마스 팝업 - 할인행사 이벤트</figcaption>
+                        <img src="./img/popup-3.png" alt="블랙프라이데이 팝업 - 할인행사 이벤트">
+                        <figcaption class="sr-only"><strong>블랙프라이데이 팝업</strong> <br> - 할인행사 이벤트</figcaption>
                     </figure>
 
                     <figure class="panorama-item">
-                        <img src="./img/black-friday-popup.png" alt="블랙프라이데이 팝업 - 할인행사 이벤트">
-                        <figcaption class="sr-only">블랙프라이데이 팝업 - 할인행사 이벤트</figcaption>
+                        <img src="./img/popup-4.jpg" alt="블랙프라이데이 팝업 - 할인행사 이벤트">
+                        <figcaption class="sr-only"><strong>블랙프라이데이 팝업</strong> <br> - 할인행사 이벤트</figcaption>
                     </figure>
 
                     <figure class="panorama-item">
-                        <img src="./img/black-friday-popup.png" alt="블랙프라이데이 팝업 - 할인행사 이벤트">
-                        <figcaption class="sr-only">블랙프라이데이 팝업 - 할인행사 이벤트</figcaption>
+                        <img src="./img/popup-5.jpg" alt="크리스마스 팝업 - 할인행사 이벤트">
+                        <figcaption class="sr-only"><strong>크리스마스 팝업</strong> <br> - 할인행사 이벤트</figcaption>
+                    </figure>
+
+                    <figure class="panorama-item">
+                        <img src="./img/popup-6.jpg" alt="곰동동라떼 스탬프 이벤트 - 팝업">
+                        <figcaption class="sr-only"><strong>곰동동라떼 스탬프 이벤트</strong> - 팝업</figcaption>
+                    </figure>
+
+                    <figure class="panorama-item">
+                        <img src="./img/popup-7.jpg" alt="곰곰 베이커리 카페 - 초코치즈 곰 케이크 런칭 이벤트">
+                        <figcaption class="sr-only"><strong>곰곰 베이커리 카페</strong> <br> - 초코치즈 곰 케이크 런칭 이벤트</figcaption>
                     </figure>
                 </div>
             </div>
         </div>
+
+        <!-- popup-design effect -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const slider = document.querySelector('.panorama-slider');
+                const track = slider?.querySelector('.panorama-track');
+                if (!slider || !track || track.dataset.duplicated === 'true') return;
+
+                const originals = Array.from(track.children);
+                if (originals.length === 0) return;
+
+                const repeats = 2; // append originals twice (total 3 loops)
+                for (let i = 0; i < repeats; i++) {
+                    originals.forEach((item) => {
+                        const clone = item.cloneNode(true);
+                        clone.setAttribute('aria-hidden', 'true');
+                        track.appendChild(clone);
+                    });
+                }
+
+                track.dataset.duplicated = 'true';
+
+                const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+                const updateMotionState = () => {
+                    track.style.animationPlayState = reduceMotionQuery.matches ? 'paused' : 'running';
+                };
+
+                updateMotionState();
+                reduceMotionQuery.addEventListener('change', updateMotionState);
+            });
+        </script>
+
+        <div class="bn-design">
+            <div class="bn-design-txt fo">
+                <h1>Banners</h1>
+                <h4>다양한 목적과 컨셉을 시각적으로 해석한 배너 디자인 작업입니다.
+                    <br>명확한 메시지 전달과 직관적인 구성에 초점을 두었습니다.</h4>
+            </div>
+            <div class="swiper banner-design common-frame">
+                <div class="swiper-wrapper banner-train">
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design1.jpg" alt="나이키 50%할인 이벤트 배너">
+                            <figcaption class="bn-txt">나이키 50%할인 이벤트 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design2.jpg" alt="블랙프라이데이 90% 할인 이벤트 배너">
+                            <figcaption class="bn-txt">블랙프라이데이 90% 할인 이벤트 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design3.jpg" alt="곰곰 베이커리 카페 성수점 오픈 이벤트 배너">
+                            <figcaption class="bn-txt">곰곰 베이커리 카페 성수점 오픈 이벤트 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design4.jpg" alt="CORSAIR - iCUE 소프트웨어 배너">
+                            <figcaption class="bn-txt">CORSAIR - iCUE 소프트웨어 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design5.jpg" alt="CORSAIR - 공식몰 구매 혜택 배너">
+                            <figcaption class="bn-txt">CORSAIR - 공식몰 구매 혜택 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design6.jpg" alt="CORSAIR - RGB 배너">
+                            <figcaption class="bn-txt">CORSAIR - RGB 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design7.jpg" alt="CORSAIR - RGB 배너2">
+                            <figcaption class="bn-txt">CORSAIR - RGB 배너2</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design8.jpg" alt="CORSAIR - RGB 배너3">
+                            <figcaption class="bn-txt">CORSAIR - RGB 배너3</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design9.jpg" alt="WS3000 워크스테이션 구매 배너">
+                            <figcaption class="bn-txt">WS3000 워크스테이션 구매 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design10.jpg" alt="GOMGOM 오픈이벤트 - 시그니처 메뉴 3,000원 할인 이벤트 배너">
+                            <figcaption class="bn-txt">GOMGOM 오픈이벤트 - 시그니처 메뉴 3,000원 할인 이벤트 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design11.jpg" alt="CORSAIR - FRAME 4500X RS-R ARGB 구매 배너">
+                            <figcaption class="bn-txt">CORSAIR - FRAME 4500X RS-R ARGB 구매 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design12.jpg" alt="GOMGOM BAKERY CAFE BANNER">
+                            <figcaption class="bn-txt">GOMGOM BAKERY CAFE BANNER</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design13.jpg" alt="CORSAIR - 공식 스토어 카드사 혜택 안내 배너">
+                            <figcaption class="bn-txt">CORSAIR - 공식 스토어 카드사 혜택 안내 배너</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide common-frame">
+                        <figure>
+                            <img src="./img/bn-design14.jpg" alt="겨울한정 핫초코 메뉴 소개 배너">
+                            <figcaption class="bn-txt">겨울한정 핫초코 메뉴 소개 배너</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- banner-design effect -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var bannerDesign = new Swiper(".banner-design", {
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            speed:15000,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop:true
+            
+            });
+        </script>
     </main>
-    
-    <!-- experience effect -->
-    <script>
-        var swiper = new Swiper(".experience", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.querySelector('.panorama-slider');
-            const track = slider?.querySelector('.panorama-track');
-            if (!slider || !track || track.dataset.duplicated === 'true') return;
-
-            const originals = Array.from(track.children);
-            if (originals.length === 0) return;
-
-            const repeats = 2; // append originals twice (total 3 loops)
-            for (let i = 0; i < repeats; i++) {
-                originals.forEach((item) => {
-                    const clone = item.cloneNode(true);
-                    clone.setAttribute('aria-hidden', 'true');
-                    track.appendChild(clone);
-                });
-            }
-
-            track.dataset.duplicated = 'true';
-
-            const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-            const updateMotionState = () => {
-                track.style.animationPlayState = reduceMotionQuery.matches ? 'paused' : 'running';
-            };
-
-            updateMotionState();
-            reduceMotionQuery.addEventListener('change', updateMotionState);
-        });
-    </script>
-   
 </body>
 </html>
