@@ -5,16 +5,16 @@
 
     .ex-bg {
         min-height: 700px;
-        height: 700px;
     }
 
     .ex {
-        margin-left: 3rem;
+        /* margin-left: 3rem; */
     }
 
-    .ex h1 {
-        font-size: 3.5rem;
-    }
+   .ex h1 {
+    font-size: 3.5rem;
+    text-align: left;
+}
 
     .experience {
         height: 500px;
@@ -36,7 +36,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: 0 7rem;
+    /* margin: 0 7rem; */
+}
+.banner-design figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    position: relative;
 }
 
     .panorama-slider{
@@ -124,7 +131,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 0 3rem;
+    /* margin: 0 3rem; */
     }
 
     .panorama-slider{

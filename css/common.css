@@ -1,4 +1,4 @@
-::root{
+:root{
     --main-color: #;
     --heading1:1.6rem;
     --heading2:1.4rem;
@@ -35,6 +35,9 @@ h4{
     font-size: var(--heading4);
     font-weight: var(--weight1);
 }
+p{
+    line-height: var(--lnh150);
+}
 
 html{
     font-size: 20px;
@@ -45,19 +48,19 @@ body.no-scroll{
 }
 
 .common-frame{
-    margin: 0 3rem;
+    margin: 0 7rem;
 }
 
 
 
 @media (max-width:1024px){
     html{font-size: 18px;}
-    .common-frameP{width: auto;
+    .common-frame{width: auto;
     margin: 0 2rem;}
 }
 
 @media (max-width:768px){
     html{font-size: 14px;}
-    .common-frameP{width: auto;
+    .common-frame{width: auto;
     margin: 0 1rem;}
 }

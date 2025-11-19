@@ -22,17 +22,17 @@
     .ex {
         margin-left: 0;
         width: 100%;
-        padding: 0 1.5rem;
+        /* padding: 0 1.5rem; */
         box-sizing: border-box;
     }
 
-    .ex h1 {
-        color: #fff;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        text-align: center;
-        width: 100%;
-    }
+.ex h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    /* width: 100%; */
+}
 
 
 
@@ -74,7 +74,7 @@
     }
 
     .skill-main-txt {
-        margin-left: 3rem;
+        /* margin-left: 3rem; */
     }
 
     .skill-box {
@@ -132,17 +132,30 @@
     }
 
     .popup-txt {
-        margin: 0 3rem;
+        /* margin: 0 3rem; */
     }
 
     .bn-design-txt {
         color: #fff;
-        margin-left: 3rem;
+        /* margin-left: 3rem; */
         margin-bottom: 4rem;
+    }
+    .bn-design h1{
+        font-size: 4.5rem;;
     }
 }
 
 @media (max-width:320px){
+
+    .aboutme-container {
+        width: 100%;
+        background: #1a1a2e url(../img/banner2.jpg) no-repeat 73% center / cover;
+        background-attachment: fixed;
+        color: #fff;
+        pointer-events: none;
+        z-index: 10;
+        transition: opacity 0.6s ease;
+    }
     .ex-bg {
         min-height: 550px;
         height: 550px;
@@ -150,7 +163,7 @@
     }
 
     .ex {
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
     }
 
     .ex h1 {
@@ -184,7 +197,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
-    margin: 0 3rem;
+    /* margin: 0 3rem; */
     }
 
     .panorama-slider{
