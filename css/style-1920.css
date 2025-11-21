@@ -1,3 +1,43 @@
+.btn-menu{
+    display: none;
+}
+.header-smart{
+    display: none;
+}
+
+header{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    padding:1rem 0;
+    z-index: 100000;
+    /* filter: blur(0); */
+    opacity: 1;
+    pointer-events: auto;
+    transition:all 1s ease 0s;
+}
+header.fadeout{
+    filter: blur(100px);
+    opacity: 0;
+    pointer-events: none;
+}
+.gnb{
+    display: inline-flex;
+    gap:2rem;
+    font-size:0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 100px;
+}
+.gnb a:hover{
+    color:var(--main-color);
+}
+
 .hero{
     height: 100vh;
     background: url(../img/banner1.jpg) no-repeat 50% 50% / cover;
@@ -494,8 +534,8 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
 
 .carousel-viewport {
     position: relative;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: 100%;
+    margin-left: calc(50% - 50%);
     padding: 4rem 0;
     overflow: hidden;
     box-sizing: border-box;
@@ -679,12 +719,16 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     box-shadow: 0 2px 8px rgba(200, 150, 220, 0.7), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.project{
-    margin-top: 10rem;
+.project-bg{
+    background: url(../img/banner4.jpg) no-repeat 50% 50% / cover;
 }
 .project h3{
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    padding-top: 3rem;
+    color: #FF9D27;
+    font-size: 4rem;
 }
 .project p{
     text-align: center;
@@ -696,15 +740,19 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     position: sticky;
     left:0;
     top:1rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
 }
-.project-sticky-menu a{
+.project-sticky-menu a {
     display: block;
+    padding: 0.3rem 1.7rem;
+    border: 1px solid #000;
+    font-size: 0.8rem;
     background-color: #fff;
-    padding:0.5rem 2.4rem;
-    border:1px solid #000;
 }
 .project-sticky-menu a:hover{
-    background-color: var(--main-color);
+    background-color: #FF9D27;
     color:#fff;
 }
 

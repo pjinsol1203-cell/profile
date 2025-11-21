@@ -12,6 +12,6 @@ table{border-collapse: collapse;}
 img{max-width: 100%;}
 
 html, body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     max-width: 100%;
 }

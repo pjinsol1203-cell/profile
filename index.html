@@ -19,14 +19,47 @@
     
     <link rel="stylesheet" href="./css/interaction.css">
     <script src="./js/observer.js"></script>
+    <script src="./js/header.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 <body>
+
+    <header>
+        <div class="common-frame">
+            <ul class="gnb">
+                <li><a href="#hero">home</a></li>
+                <li><a href="#aboutme">about me</a></li>
+                <li><a href="#skill">skill</a></li>
+                <li><a href="#popup">popups</a></li>
+                <li><a href="#banner">banners</a></li>
+                <li><a href="#project">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="./img/resume.jpg" target="_blank">resume</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="btn-menu">
+        <img class="btn-menu-img" src="./img/menu.svg" alt="모바일 메뉴 버튼">
+    </div>
+    <div class="header-smart fadeout">
+        <ul class="gnb-smart">
+            <li><a href="#hero">home</a></li>
+            <li><a href="#aboutme">about me</a></li>
+            <li><a href="#skill">skill</a></li>
+            <li><a href="#popup">popups</a></li>
+            <li><a href="#banner">banners</a></li>
+            <li><a href="#project">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="./img/resume-pjs.png" target="_blank">resume</a></li>
+        </ul>
+    </div>
+
+
     <div class="noise"></div>
     <main>
-        <div class="hero">
+        <div class="hero" id="hero">
             <div class="common-frame foi">   
                 <p> <strong>WEB PUBLISHER</strong> 박진솔</p>
                 <h1>Eternal Glow</h1>
@@ -506,30 +539,30 @@
             
             });
         </script>
-
+        <div class="project-bg">
            <div class="project">
             <div class="common-frame">
-                <h3>Responsive Web Project</h3>
+                <h3 class>Responsive Web Project</h3>
                 <p>
                     기획부터 와이어프레임, 시안 디자인, 프로토타입까지 전 과정을 직접 수행하였습니다.<br>
                     반응형 웹디자인을 적용하여 다양한 디바이스에서의 접근성을 높이고<br>직관적인 UI를 통해 브랜드의 정체성을 효과적으로 만들려고 노력했습니다.
                 </p>
             </div>
-            <section class="project-frame">
+                <section class="project-frame">
                     <ul class="project-sticky-menu">
                         <li><a href="#" target="_blank">New Branding Web</a></li>
-                        <li><a href="#" target="_blank">Figma</a></li>
+                        <li><a href="https://www.figma.com/proto/NeYDMZ6NkcHCUMYhjJozQY/GOMGOM?node-id=0-1&t=nTnprsUBe3HPuyZt-1" target="_blank">Figma</a></li>
                     </ul>
                     <figure class="project-img">
                         <!-- 상세 이미지 -->
                          <picture>
-                            <source media="(max-width:768px)" srcset="./img/portfolio page-gomgom-768.jpg">
-                            <img src="./img/portfolio page-gomgom-1920.jpg" alt="프로젝트 상세페이지 이미지">
+                            <source media="(max-width:768px)" srcset="./img/portfolio-page-gomgom-768.jpg">
+                            <img src="./img/portfolio-page-gomgom-1920.jpg" alt="프로젝트 상세페이지 이미지">
                          </picture>
                     </figure>
                 </section>
+            </div>
         </div>
-
     </main>
 </body>
 </html>
