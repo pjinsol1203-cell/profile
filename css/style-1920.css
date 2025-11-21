@@ -724,7 +724,6 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
 }
 .project h3{
     text-align: center;
-    margin-bottom: 2rem;
     font-family: "Playfair Display", serif;
     padding-top: 3rem;
     color: #FF9D27;
@@ -750,6 +749,7 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     border: 1px solid #000;
     font-size: 0.8rem;
     background-color: #fff;
+    border-radius: 2rem;
 }
 .project-sticky-menu a:hover{
     background-color: #FF9D27;
@@ -758,6 +758,66 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
 
 .experience{
     padding:1rem 0!important;
+}
+
+.project-cor-bg {
+    background: url(../img/corsair-bg.jpg) no-repeat 50% 0%;
+    /* background-attachment: fixed; */
+}
+.project-cor h3>a>img{
+    width: 250px;
+} 
+
+.project-cor h4{
+    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #FF00E4;
+    text-align: center;
+}
+
+.project-cor p{
+    text-align: center;
+    color: #fff;
+}
+
+.project-cor-sticky-menu{
+    display: flex;
+    gap:1rem;
+    position: sticky;
+    left:0;
+    top:1rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;}
+
+.project-cor-sticky-menu a {
+    display: block;
+    padding: 0.3rem 1.7rem;
+    border: 1px solid #000;
+    font-size: 0.8rem;
+    background-color: #fff;
+    border-radius: 2rem;
+}
+
+.project-cor-sticky-menu a:hover{
+    background-color: #FF00E4;
+    color:#fff;
+}
+
+.end-box{
+    background: url(../img/banner3.jpg) no-repeat 50% 50% / center;
+    height: 900px;
+}
+
+
+
+.end-img{
+    background: url(../img/me1.jpg) no-repeat 50% 50% / center;
+    width: 6rem;
+}
+
+.end-img:hover{
+    background: url(../img/me2.jpg) no-repeat 50% 50% / center;
 }
 
 
