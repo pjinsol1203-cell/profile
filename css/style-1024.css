@@ -8,9 +8,11 @@
         right:5rem;
         top:7rem;
         bottom:5rem;
-        background-color: rgba(255, 255, 255, 0.6);
+        background: linear-gradient(135deg, rgb(53 43 82 / 60%), #ffffff47);
+        border: 1px solid rgba(240, 232, 255, 0.5);
+        box-shadow: 0 1.2rem 2.1rem rgba(12, 6, 24, 0.45);
+        color: #fff;
         backdrop-filter: blur(10px);
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
         border-radius: 5rem;
         display: flex;
         justify-content: center;
@@ -48,11 +50,15 @@
         filter: blur(0px);
         opacity: 1;
         pointer-events: auto;
-        background-color: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(10px);
         border-radius: 100px;
         cursor: pointer;
-    }
+        background: linear-gradient(135deg, rgb(53 43 82 / 60%), #ffffff47);
+        border: 1px solid rgba(240, 232, 255, 0.5);
+        box-shadow: 0 1.2rem 2.1rem rgba(12, 6, 24, 0.45);
+        color: #fff;
+        }
+
     .btn-menu.fadeout{
         filter: blur(100px);
         opacity: 0;

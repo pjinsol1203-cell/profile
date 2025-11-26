@@ -1,7 +1,9 @@
 .foi{
-    transition: all 1s ease 0s;
+    transition: all 0.92s ease 0s;
+    transform:scale(1.04);
     filter: blur(10px);
 }
 .foi.on{
+    transform:scale(1);
     filter: blur(0px);
 }

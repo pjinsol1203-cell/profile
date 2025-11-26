@@ -4,7 +4,10 @@
 .header-smart{
     display: none;
 }
-
+main {
+    background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
+}
 header{
     position: fixed;
     left:0;
@@ -22,20 +25,55 @@ header.fadeout{
     opacity: 0;
     pointer-events: none;
 }
-.gnb{
+/* div#aboutme:after{
+    content:"";
+    position:absolute;
+    left: 0;
+    bottom:0;
+     width: 100%;
+    padding: 60px 20px 40px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    border-radius: 20px;
+    
+    clip-path: path(
+    "M0% 12%
+     C15% 0%, 35% 25%, 50% 12%
+     C65% 0%, 85% 25%, 100% 12%
+     L100% 100%
+     L0% 100%
+     Z"
+    );
+} */
+.ex-deco-svg {
+    position: absolute;
+    left: 0;
+    top: -400px;
+    width: 100%;
+    height: 400px;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+}
+.gnb {
     display: inline-flex;
-    gap:2rem;
-    font-size:0.8rem;
+    gap: 2rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding:1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1rem 2rem;
     backdrop-filter: blur(10px);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
     border-radius: 100px;
+    background: linear-gradient(135deg, rgb(53 43 82 / 60%), #ffffff47);
+    border: 1px solid rgba(240, 232, 255, 0.5);
+    box-shadow: 0 1.2rem 2.1rem rgba(12, 6, 24, 0.45);
+    color: #fff;
 }
+
 .gnb a:hover{
-    color:var(--main-color);
+    color:#ef05e8;
 }
 
 .hero{
@@ -750,6 +788,11 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     font-size: 0.8rem;
     background-color: #fff;
     border-radius: 2rem;
+    background: linear-gradient(135deg, rgba(53, 43, 82, 0.4), rgba(108, 82, 132, 0.35));
+    border: 1px solid rgba(240, 232, 255, 0.5);
+    border-radius: 50px;
+    backdrop-filter: blur(7px);
+    color: #fff;
 }
 .project-sticky-menu a:hover{
     background-color: #FF9D27;
@@ -797,6 +840,11 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     font-size: 0.8rem;
     background-color: #fff;
     border-radius: 2rem;
+    background: linear-gradient(135deg, rgba(53, 43, 82, 0.4), rgba(108, 82, 132, 0.35));
+    border: 1px solid rgba(240, 232, 255, 0.5);
+    border-radius: 50px;
+    backdrop-filter: blur(7px);
+    color: #fff;
 }
 
 .project-cor-sticky-menu a:hover{
@@ -804,22 +852,203 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     color:#fff;
 }
 
-.end-box{
-    background: url(../img/banner3.jpg) no-repeat 50% 50% / center;
-    height: 900px;
+.end-box {
+    background: url(../img/end-bg.jpg) no-repeat 50% 50% / cover;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    background-attachment: fixed;
 }
 
-
-
 .end-img{
-    background: url(../img/me1.jpg) no-repeat 50% 50% / center;
-    width: 6rem;
+    background: url(../img/me1.jpg) no-repeat center center / cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 2rem auto;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 4px;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.3),
+        0 0 60px rgba(255, 255, 255, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.end-img::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 192, 203, 0.8),
+        rgba(147, 112, 219, 0.8),
+        rgba(255, 255, 255, 0.9));
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradient-rotate 4s linear infinite;
+    filter: blur(8px);
+    opacity: 0.85;
+}
+
+.end-img::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 192, 203, 0.5),
+        rgba(147, 112, 219, 0.5),
+        rgba(255, 255, 255, 0.6));
+    background-size: 400% 400%;
+    z-index: -2;
+    animation: gradient-rotate 6s linear infinite reverse;
+    filter: blur(15px);
+    opacity: 0.6;
+}
+
+.project-img{
+    line-height: 0;
+}
+
+@keyframes gradient-rotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 40px rgba(255, 255, 255, 0.2),
+            0 0 60px rgba(255, 255, 255, 0.1),
+            inset 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(255, 255, 255, 0.5),
+            0 0 60px rgba(255, 255, 255, 0.3),
+            0 0 90px rgba(255, 255, 255, 0.1),
+            inset 0 0 30px rgba(255, 255, 255, 0.2);
+    }
 }
 
 .end-img:hover{
-    background: url(../img/me2.jpg) no-repeat 50% 50% / center;
+    background: url(../img/me2.jpg) no-repeat center center / cover;
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.1),
+        0 0 40px rgba(255, 255, 255, 0.1),
+        0 0 60px rgba(255, 255, 255, 0.15);
 }
 
+.end-img:hover::before {
+    opacity: 0.5;
+    filter: blur(8px);
+}
+
+.end-img:hover::after {
+    opacity: 0.4;
+    filter: blur(15px);
+}
+
+.end-box h1{
+    color: #fff;
+    text-align: center;
+}
+
+.end-txt{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(135deg, rgba(53, 43, 82, 0.4), rgba(108, 82, 132, 0.35));
+    border: 1px solid rgba(240, 232, 255, 0.5);
+    box-shadow: 0 1.2rem 2.1rem rgba(12, 6, 24, 0.45);
+    border-radius: 1.2rem;
+    padding: 2.4rem 2rem;
+    backdrop-filter: blur(7px);
+    /* opacity: 0; */
+    /* transform: translateY(40px); */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.end-box h4{
+    font-family: "Playfair Display", serif;
+    padding-bottom: 1rem;}
+
+.end-txt p{
+    padding-bottom: 1rem;
+}
+
+/* 연락처 정보 스타일 */
+.end-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(53, 43, 82, 0.4), rgba(108, 82, 132, 0.35));
+    border: 1px solid rgba(240, 232, 255, 0.5);
+    border-radius: 50px;
+    backdrop-filter: blur(7px);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, rgba(53, 43, 82, 0.6), rgba(108, 82, 132, 0.55));
+}
+
+.contact-item .contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-item span {
+    color: #fff;
+    font-weight: 500;
+}
 
 @keyframes panorama-scroll{
     0%{

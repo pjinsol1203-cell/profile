@@ -65,3 +65,21 @@ body.no-scroll{
     .common-frame{width: auto;
     margin: 0 1rem;}
 }
+
+/* 입력 필드가 컨테이너를 넘지 않도록 기본 스타일 */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+form,
+[class*="form"],
+[class*="login"] {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
