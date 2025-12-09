@@ -804,8 +804,8 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
 }
 
 .project-cor-bg {
-    background: url(../img/corsair-bg.jpg) no-repeat 50% 0%;
-    /* background-attachment: fixed; */
+    background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
+    background-attachment: fixed;
 }
 .project-cor h3>a>img{
     width: 250px;
