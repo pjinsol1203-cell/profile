@@ -757,6 +757,38 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
     box-shadow: 0 2px 8px rgba(200, 150, 220, 0.7), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
+.pro-detail {
+    background: url(../img/banner3.jpg) no-repeat 50% 50% / cover;
+    color: #fff;
+    padding: 6rem 0;
+    background-attachment: fixed;
+}
+
+.product-txt{
+    color: #fff;
+}
+
+.product-txt h1{
+    font-size: 4.5rem;
+}
+
+.detail-thumb{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.detail>h2{
+    margin-bottom: 0.5rem;
+}
+
+.beauty{
+    height: 790px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
 .project-bg{
     background: url(../img/banner4.jpg) no-repeat 50% 50% / cover;
 }

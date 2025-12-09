@@ -40,7 +40,7 @@ p{
 }
 
 html{
-    font-size: 20px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -52,6 +52,21 @@ body.no-scroll{
     margin: 0 7rem;
 }
 
+::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.8rem;
+}
+
+
+::-webkit-scrollbar-track{
+    background: #484c53
+    /* border-radius: 10px; */
+}
+
+::-webkit-scrollbar-thumb{
+    background: #c076bf;
+    border-radius: 10px;
+}
 
 
 @media (max-width:1024px){
