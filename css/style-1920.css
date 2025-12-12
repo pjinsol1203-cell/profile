@@ -792,6 +792,7 @@ background: #685c74 url(../img/banner2.jpg) no-repeat center center / cover;
 .project-bg{
     background: url(../img/banner4.jpg) no-repeat 50% 50% / cover;
 }
+
 .project h3{
     text-align: center;
     font-family: "Playfair Display", serif;
